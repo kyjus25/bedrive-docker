@@ -1,5 +1,6 @@
 if [ "$(docker ps -q --filter ancestor=bedrive)" != "" ]; then
     docker stop $(docker ps -q --filter ancestor=bedrive)
+    docker rm $(docker ps -q --filter ancestor=bedrive)
 fi
 
 docker build --no-cache -t bedrive .
