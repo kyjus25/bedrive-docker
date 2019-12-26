@@ -4,5 +4,4 @@ if [ "$(docker ps -q --filter ancestor=bedrive)" != "" ]; then
 fi
 
 docker build --no-cache -t bedrive .
-docker run -it -d -p 80:80 -v $(pwd)/bedrive:/opt/lampp/htdocs -v $(pwd)/mysql:/opt/lampp/var/mysql bedrive
-docker exec -i $(docker ps -q --filter ancestor=bedrive) /opt/lampp/xampp start;
+docker run -it -d -p 80:80 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -v $(pwd)/bedrive:/var/www/localhost/htdocs/ bedrive
