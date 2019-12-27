@@ -5,6 +5,7 @@
 nbproject/
 
 # Mac OS X
+__MACOSX/
 .DS_Store
 .Spotlight-V100
 .Trashes
@@ -26,3 +27,5 @@ src/libs/
 
 # VSCode
 .vscode/
+
+bedrive/
